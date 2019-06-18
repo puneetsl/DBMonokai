@@ -1,0 +1,23 @@
+{
+  "name": "DBMonokai",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Monokai theme for Databricks notebooks",
+  "icons": {
+    "48": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.databricks.com/*"],
+      "css": [
+        "css/editor.css",
+        "css/markdown.css",
+        "css/cell.css",
+        "css/navbar.css",
+        "css/widget.css",
+        "css/body.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
